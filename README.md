@@ -31,20 +31,33 @@ Each computed layer will be stored in a 2x1 column vector
 
 To get started we need to first calculate the values for each layer to be later used for back propagation.  
 
-1. To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer. 
-  
-![Weighted sum / Z  Calculation](/Images/z_calculation.png)  
+1. To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer.
+
+ <p align="center">
+  <img src="/Images/z_calculation.png">
+</p>
+
   
 2. Plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function). 
   
-![Activation Calculation](/Images/activation_calculation.png) 
+<p align="center">
+  <img src="/Images/activation_calculation.png">
+</p>
   
   
    If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
- 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
-" target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"
-alt="Activation Function Video" width="220" height="160" border="10" /></a>
+   
+<a align="center">
+  <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
+  " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"
+  alt="Activation Function Video" width="220" height="160" border="10" /></a>
+
+
+Using vectorization we can caluculate the activation values for each layer in just one step, starting with the first hidden layer.
+
+<p align="center">
+  <img src="/Images/activation_calculation.png">
+</p>
 
 
 

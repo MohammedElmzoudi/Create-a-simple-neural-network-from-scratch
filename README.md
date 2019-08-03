@@ -35,12 +35,22 @@ To get started we need to first calculate the values for each layer to be later 
   
 2. Plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function).   
   
-  1.  
-    ![Weighted sum / Z  Calculation](/Images/z_calculation.png)   
-  2.  
-    ![Activation Calculation](/Images/activation_calculation.png)  
+  1. ![Weighted sum / Z  Calculation](/Images/z_calculation.png)   
 
-   * Unordered sub-list. If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
+  2. 
+      
+ 
+ 
+1. First ordered list item
+2. Another item
+  * Unordered sub-list. 
+1. Actual numbers don't matter, just that it's a number
+  1. ![Activation Calculation](/Images/activation_calculation.png)
+4. And another item.
+
+    
+  
+   * If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
 " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"

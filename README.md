@@ -15,12 +15,14 @@ This project aims to help you create a simple 3 layer neural network (1 output l
 ## Getting Started
 
 ### Weights  
-The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron.   
+The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron. 
+  
 ----------- Layer 1 --------------------- Layer 2 -----------  
 ![Layer1_weights](/Images/layer1_weights.png) ![Layer1_weights](/Images/layer2_weights.png)
 
 ### Layers  
-Each computed layer will be stored in a 2x1 column vector  
+Each computed layer will be stored in a 2x1 column vector 
+  
 --- Layer 1 ------ Layer 2 ------ Layer 3 ---  
 ![Layer1](/Images/Layer1.png) ![Layer2](/Images/layer2.png) ![Layer3](/Images/layer3.png)
   
@@ -29,19 +31,19 @@ Each computed layer will be stored in a 2x1 column vector
 
 To get started we need to first calculate the values for each layer to be later used for back propagation.  
 
-- To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer. 
+1. To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer. 
   
 ![Weighted sum / Z  Calculation](/Images/z_calculation.png)  
   
-- Next, plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function).
+2. Next, plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function).
   
 ![Activation Calculation](/Images/activation_calculation.png)  
   
->  If you are not yet familiar with the topic of activation functions I highly recommend watching this video.
+   * Unordered sub-list. If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
 
-   <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
-   " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg" 
-   alt="Activation Function Video" width="220" height="160" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
+" target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"
+alt="Activation Function Video" width="220" height="160" border="10" /></a>
 
 
 

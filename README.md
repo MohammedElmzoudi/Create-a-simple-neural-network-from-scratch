@@ -33,12 +33,13 @@ To get started we need to first calculate the values for each layer to be later 
 
 1. To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer. 
   
-![Weighted sum / Z  Calculation](/Images/z_calculation.png)  
+2. Plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function).   
   
-2. Next, plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function).
-  
-![Activation Calculation](/Images/activation_calculation.png)  
-  
+  1.  
+    ![Weighted sum / Z  Calculation](/Images/z_calculation.png)   
+  2.  
+    ![Activation Calculation](/Images/activation_calculation.png)  
+
    * Unordered sub-list. If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE

@@ -20,4 +20,7 @@ The weights for each layer are stored in a 2x2 matrix, where each row indicates 
 ![Layer1_weights](/Images/layer1_weights.png) ![Layer1_weights](/Images/layer2_weights.png)
 
 ### Layers  
-Each computed layer will be stored in a 2x1 column vector
+Each computed layer will be stored in a 2x1 column vector  
+>Layer 1 ------- Layer 2 ------- Layer 3
+  
+![Layer1](/Images/Layer1.png) ![Layer2](/Images/layer2.png) ![Layer3](/Images/layer3.png)

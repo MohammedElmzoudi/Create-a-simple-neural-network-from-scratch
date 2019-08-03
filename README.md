@@ -24,3 +24,21 @@ Each computed layer will be stored in a 2x1 column vector
 >Layer 1 ------- Layer 2 ------- Layer 3
   
 ![Layer1](/Images/Layer1.png) ![Layer2](/Images/layer2.png) ![Layer3](/Images/layer3.png)
+
+## Forward Propagate
+
+To get started we need to first calculate the values for each layer to be later used for back propagation.  
+
+- To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer. 
+  
+![Weighted sum / Z  Calculation](/Images/z_calculation.png)  
+  
+- Next you need to plug the calculated Z value into an activation function, I highly recommend watching this video on activation functions if you are not familiar with the topic.  
+
+    <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
+    " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg" 
+    alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
+-- The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function)
+
+![Activation Calculation](/Images/activation_calculation.png)  

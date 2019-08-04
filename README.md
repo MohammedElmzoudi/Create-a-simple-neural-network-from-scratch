@@ -1,7 +1,9 @@
 # Create-a-simple-neural-network-from-scratch
-Learn to implement your own simple, vectorized neural network from scratch in python using numpy
+Learn how to create a fully functioning neural network with fully vectorized and simple implementations of forward and back propagation in python without the use of external machine learning libraries.
 
-![Neural Network Overview](https://matthewmazur.files.wordpress.com/2018/03/neural_network-9.png)  
+<p align="center">
+  <img src="/Images/neural_network-diagram.png">
+</p>  
 
 This project aims to help you create a simple 3 layer neural network (1 output layer, 1 input layer, 1 hidden layer) with 2 activation neurons each by walking through how to implement forward and backpropagation in a vectorized format.   
   

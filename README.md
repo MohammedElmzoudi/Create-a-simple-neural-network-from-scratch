@@ -96,7 +96,7 @@ And in python:
 
 
 <p align="center">
-  <b><a href="#">Weights:</a></b>
+  <b><a>Weights:</a></b>
   <br><br>
   <img src="/Images/ThetaN.png"><br/>  
   <i><a href="#">l = the layer of the neurons that the weights effects.</a><br/>

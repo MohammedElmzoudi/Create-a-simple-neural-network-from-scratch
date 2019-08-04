@@ -14,16 +14,23 @@ This project aims to help you create a simple 3 layer neural network (1 output l
 ## Getting Started
 
 ### Weights  
-The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron. 
+The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron.   
   
------------ Layer 1 --------------------- Layer 2 -----------  
-![Layer1_weights](/Images/layer1_weights.png) ![Layer1_weights](/Images/layer2_weights.png)
-
+-------------------------------------------- Layer 1 ---------------------- Layer 2 -------------------------------------------- 
+<p align="center">
+  <img src="/Images/layer1_weights.png">
+  <img src="/Images/layer2_weights.png">
+</p>
+ 
 ### Layers  
 Each computed layer will be stored in a 2x1 column vector 
   
---- Layer 1 ------ Layer 2 ------ Layer 3 ---  
-![Layer1](/Images/Layer1.png) ![Layer2](/Images/layer2.png) ![Layer3](/Images/layer3.png)
+--------------------------------------------- Layer 1 ------ Layer2 ------ Layer 3 ---------------------------------------------
+<p align="center">
+  <img src="/Images/Layer1.png">
+  <img src="/Images/layer2.png">
+  <img src="/Images/layer3.png">
+</p>
   
 ## Forward Propagation
 

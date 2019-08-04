@@ -21,7 +21,7 @@ The weights for each layer are stored in a 2x2 matrix, where each row indicates 
   <img src="/Images/layer2_weights.png">
 </p>
   
-- Weights for layers 2 and 3 respectively
+> Weights for layers 2 and 3 respectively
    
 ### Layers  
 Each computed layer will be stored in a 2x1 column vector 
@@ -32,7 +32,7 @@ Each computed layer will be stored in a 2x1 column vector
   <img src="/Images/layer3.png">
 </p>
 
-- Layers 1, 2, and 3 respectively
+> Layers 1, 2, and 3 respectively
   
   
 ## Forward Propagation

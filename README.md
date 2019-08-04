@@ -41,7 +41,7 @@ To get started we need to first calculate the values for each layer to be later 
   <img src="/Images/activation_calculation.png">
 </p>
    - If you are not yet familiar with how activation functions work I highly recommend       watching this video on the topic.
-<a align="center">
+<p align="center">
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
   " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"
   alt="Activation Function Video" width="220" height="160" border="10" /></a>

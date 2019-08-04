@@ -53,7 +53,7 @@ To get started we need to first calculate the values for each layer to be later 
   alt="Activation Function Video" width="220" height="160" border="10" /></a>
 
 ### Vectorized Implementation
-Using vectorization we can caluculate the activation values for each layer in just one step, starting with the first hidden layer.
+Using vectorization we can caluculate the activation values for each layer in just one step, starting with the first hidden layer and continuing untill you reach the output layer.
 
 <p align="center">
   <img src="/Images/FFVectorized.png">

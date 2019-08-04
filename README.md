@@ -45,7 +45,7 @@ To get started we need to first calculate the values for each layer to be later 
 </p>
   
   
-   If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
+   - If you are not yet familiar with how activation functions work I highly recommend       watching this video on the topic.
    
 <a align="center">
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
@@ -59,5 +59,12 @@ Using vectorization we can caluculate the activation values for each layer in ju
   <img src="/Images/FFVectorized.png">
 </p>
 
-
-
+   And in python:
+   
+```
+ z_hidden_layer1 = np.matmul(weights1,input_values) + bias1
+ hidden_layer1 = sigmoid(z_hidden_layer1)
+ 
+ z_output_layer = np.matmul(weights2,hidden_layer1) + bias2
+ output_layer = sigmoid(z_output_layer)
+```

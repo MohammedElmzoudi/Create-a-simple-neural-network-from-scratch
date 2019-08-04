@@ -81,7 +81,7 @@ And in python:
 - Each machine learning algorithm has what is called a loss function. This function determines how well a model is performing on a certain dataset based on how close the values that the model outputs when given a set of inputs, is to the actual desired value of those inputs are. The goal of any machine learning model is to minimize this cost function by finding the best values for a set of weights. 
 - By taking the derivative of the cost function with respect to each weight, we can find the slope of the line on the cost function when that weight is a certain value. A positive slope indicates that if the value of the weight is decreased then the cost function will also decrease, and vise-versa. By continuously subtracting the derivative w.r.t thetea from theta itself, we can eventually hope to reach a global minimum of the cost function. I sugest reading more about the topic [here](https://en.wikipedia.org/wiki/Gradient_descent). 
  <p align="center">
-  <img src="/Images/gradient_descent.gif">
+  <img src="https://thumbs.gfycat.com/KindAmpleImperialeagle-size_restricted.gif">
 </p>
 
 

@@ -87,7 +87,7 @@ And in python:
 ### Notation
 
 <p align="center">
-  <b><a href="#">Cost Function:</a>
+  <b><a>Cost Function:</a>
   <br><br>
   <img src="/Images/CostN.png">
 </p>
@@ -99,19 +99,19 @@ And in python:
   <b><a>Weights:</a></b>
   <br><br>
   <img src="/Images/ThetaN.png"><br/>  
-  <i><a href="#">l = the layer of the neurons that the weights effects.</a><br/>
-  <i><a href="#">i = The specific neuron that the weight is attatched to.</a><br/>
-  <i><a href="#">j = the neuron of the previous layer that is multiplied by the weight. </a><br/>
+  <i><a>l = the layer of the neurons that the weights effects.</a><br/>
+  <i><a>i = The specific neuron that the weight is attatched to.</a><br/>
+  <i><a>j = the neuron of the previous layer that is multiplied by the weight. </a><br/>
 </p>
 
 <p align="center">
-  <b><a href="#">Weight l,i,j gradient:</a>
+  <b><a>Weight l,i,j gradient:</a>
   <br><br>
   <img src="/Images/NablaN.png"><br/>  
 </p>
 
 <p align="center">
-  <b><a href="#">Delta (Will go over this later on):</a>
+  <b><a>Delta (Will go over this later on):</a>
   <br><br>
   <img src="/Images/deltaN.png"><br/>  
 </p>
@@ -120,10 +120,35 @@ And in python:
 
 
 
-### Derivation
-__Goal__ : Find Derivative of cost function with respect to a specific weight l,i,j
+### Derivation / Proof
 
-
-
+__Goal__ : Find Derivative of the cost function with respect to a specific weight l,i,j. (Note that this derivation works so that any cost function can be used).  
+- Also note that knowledge of the [Chain Rule](https://www.youtube.com/watch?v=6kScLENCXLg&vl=en) is required as it is used heavily throughout this proof.   
+  
+<p align="center">
+  <img src="/Images/deriv0.png">
+</p>
+  
+1. Using the chain rule we know that this equation can simplify.  
+<p align="center">
+  <img src="/Images/deriv1.png">
+</p>
+  
+2. Remember that the Z value is just the weighted sum of the neurons in the previous layer.  
+<p align="center">
+  <img src="/Images/deriv2.png"><br/>  
+    <sub><i><a>When taking the derivative with respect to a variable, every term that does not contain the variable will equate to zero</a><br/>
+  <i><a>Because of this, we can ignore all summations that do not contain theta. </a><br/>
+  <i><a> 2.1 </a><br/>
+  <img src="/Images/deriv2.1.png"><br/>
+  <i><a>And we can treat z as a single, simple term and take its derivative. </a><br/>
+  <i><a> 2.2 </a><br/>
+  <img src="/Images/deriv2.2.png"><br/>
+  <i><a> 2.3 </a><br/>
+  <img src="/Images/deriv2.3.png"><br/>
+  <i><a> 2.4 </a><br/>
+  <img src="/Images/deriv2.4.png"><br/></sub>
+</p>
+    
 
 

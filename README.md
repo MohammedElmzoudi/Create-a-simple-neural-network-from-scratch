@@ -87,7 +87,7 @@ And in python:
 ### Notation
 
 <p align="center">
-  <a href="#">Cost Function:</a>
+  <b><a href="#">Cost Function:</a>
   <br><br>
   <img src="/Images/CostN.png">
 </p>
@@ -96,19 +96,32 @@ And in python:
 
 
 <p align="center">
-  <a href="#">Weights:</a>
+  <b><a href="#">Weights:</a></b>
   <br><br>
-  <img src="/Images/ThetaN.png">
+  <img src="/Images/ThetaN.png"><br/>  
+  <i><a href="#">l = the layer of the neurons that the weights effects.</a><br/>
+  <i><a href="#">i = The specific neuron that the weight is attatched to.</a><br/>
+  <i><a href="#">j = the neuron of the previous layer that is multiplied by the weight. </a><br/>
+</p>
+
+<p align="center">
+  <b><a href="#">Weight l,i,j gradient:</a>
+  <br><br>
+  <img src="/Images/NablaN.png"><br/>  
+</p>
+
+<p align="center">
+  <b><a href="#">Delta (Will go over this later on):</a>
+  <br><br>
+  <img src="/Images/deltaN.png"><br/>  
 </p>
 
 
 
-- l = the layer that the weights effect.  
-- i = The specific neuron that the weight is attatched to.  
-- j = the neuron of the previous layer that is multiplied by the weight.  
+
 
 ### Derivation
-__Goal__ : Find Derivative of cost function with respect to a specific weight
+__Goal__ : Find Derivative of cost function with respect to a specific weight l,i,j
 
 
 

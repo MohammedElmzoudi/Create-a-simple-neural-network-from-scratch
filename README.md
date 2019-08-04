@@ -9,9 +9,6 @@ This project aims to help you create a simple 3 layer neural network (1 output l
 
 > https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/.  
 
-
-
-
 ## Getting Started
 
 ### Weights  
@@ -26,7 +23,6 @@ Each computed layer will be stored in a 2x1 column vector
 --- Layer 1 ------ Layer 2 ------ Layer 3 ---  
 ![Layer1](/Images/Layer1.png) ![Layer2](/Images/layer2.png) ![Layer3](/Images/layer3.png)
   
-
 ## Forward Propagate
 
 To get started we need to first calculate the values for each layer to be later used for back propagation.  
@@ -37,30 +33,29 @@ To get started we need to first calculate the values for each layer to be later 
   <img src="/Images/z_calculation.png">
 </p>
 
-  
 2. Plug the calculated Z value into an activation function. The activation function we will be using for each node is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function). 
   
 <p align="center">
   <img src="/Images/activation_calculation.png">
 </p>
-  
-  
    - If you are not yet familiar with how activation functions work I highly recommend       watching this video on the topic.
-   
 <a align="center">
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
   " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"
   alt="Activation Function Video" width="220" height="160" border="10" /></a>
 
 ### Vectorized Implementation
-Using vectorization we can caluculate the activation values for each layer in just one step, starting with the first hidden layer and continuing untill you reach the output layer.
+Using vectorization we can caluculate the activation values for each layer in just one step, starting with the first hidden layer and continuing until you reach the output layer.
 
 <p align="center">
   <img src="/Images/FFVectorized.png">
 </p>
 
-   And in python:
-   
+<p align="center">
+  <img src="/Images/FFVectorized2.png">
+</p>
+
+And in python:   
 ```
  z_hidden_layer1 = np.matmul(weights1,input_values) + bias1
  hidden_layer1 = sigmoid(z_hidden_layer1)

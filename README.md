@@ -39,7 +39,7 @@ Each computed layer will be stored in a 2x1 column vector
 
 To get started we need to first calculate the values for each layer to be later used for back propagation.  
 
-1. To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values (The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer.
+1. To find the value of a node first multiply each weight 'attatched' to the node, by a node in the previous layer, and taking the sum of all these values,(The weighted sum) this value will be refered to as the 'Z' value. Note that each node has a weight for all the nodes in the previous layer.
 
  <p align="center">
   <img src="/Images/z_calculation.png">
@@ -78,7 +78,7 @@ And in python:
 ## Backpropagation
 
 ### Brief Explanation
-- Each machine learning algorithm has what is called a loss function. This function determines how well a model is performing on a certain dataset based on how close the values that the model outputs when given a set of inputs, is to the actual desired value of those inputs are. The goal of any machine learning model is to minimize this cost function by finding the best values for a set of weights. 
+- Each machine learning algorithm has what is called a loss function. This function determines how well a model is performing on a certain dataset based on how close the values that the model outputs when given a set of inputs is to the actual desired value of those inputs. The goal of any machine learning model is to minimize this cost function by finding the optimal value for each weight.
 - By taking the derivative of the cost function with respect to each weight, we can find the slope of the line on the cost function when that weight is a certain value. A positive slope indicates that if the value of the weight is decreased then the cost function will also decrease, and vise-versa. By continuously subtracting the derivative w.r.t thetea from theta itself, we can eventually hope to reach a global minimum of the cost function. You can learn more about the topic [here](https://en.wikipedia.org/wiki/Gradient_descent). 
  <p align="center">
   <img src="https://thumbs.gfycat.com/KindAmpleImperialeagle-size_restricted.gif">
@@ -147,8 +147,15 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   <i><a> 2.3 </a><br/>
   <img src="/Images/deriv2.3.png"><br/>
   <i><a> 2.4 </a><br/>
-  <img src="/Images/deriv2.4.png"><br/></sub>
+  <img src="/Images/deriv2.4.png"><br/>
+  <i><a>Now the derivative of z^l is just the neuron in the previous layer that multiplies the theta we are solving for. </a><br/></sub>
 </p>
     
+3. The derivative of the cost function with respect to any z value is called delta, or the error value for that node. Because 'z' is the weighted sum of all the nodes in the previous layer, if the derivative of the cost w.r.t 'z' (or the slope of the tangent line on the cost function when z is a certain value ) is extremely low, this means that your current z value is already in it's best position to provide the lowest possible value of the cost function and vise versa. This essentially tells you how 'wrong' your combination of weights and biases are, hence the name delta.
+<p align="center">
+  <sub><i><a><b> Goal: Find </a><br/></sub></b>
+  <br/>
+  <img src="/Images/deriv3.0.png"><br/>  
+</p>
 
 

@@ -216,7 +216,7 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   <i><a> 5.2 </a><br/>
   <i><a> This entire term is the delta value of the node theta is attatched to: </a><br/>
   <br/>
-  <img src="/Images/deriv5.2.png"><br/>  
+  <img src="/Images/deriv5.22.png"><br/>  
   <br/>
   <i><a> 5.3 </a><br/>
   <i><a> So we can re-write this as: </a><br/>

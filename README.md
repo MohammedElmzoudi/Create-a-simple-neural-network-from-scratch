@@ -126,28 +126,43 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
 - Also note that knowledge of the [Chain Rule](https://www.youtube.com/watch?v=6kScLENCXLg&vl=en) is required as it is used heavily throughout this proof.   
   
 <p align="center">
+  <br/>
   <img src="/Images/deriv0.png">
+  <br/>
 </p>
   
 1. Using the chain rule we know that this equation can simplify.  
 <p align="center">
+  <br/>
   <img src="/Images/deriv1.png">
+  <br/>
 </p>
   
 2. Remember that the Z value is just the weighted sum of the neurons in the previous layer.  
 <p align="center">
+  <br/>
   <img src="/Images/deriv2.png"><br/>  
-    <sub><i><a>When taking the derivative with respect to a variable, every term that does not contain the variable will equate to zero</a><br/>
+  <br/>
+  <sub><i><a>When taking the derivative with respect to a variable, every term that does not contain the variable will equate to zero</a><br/>
   <i><a>Because of this, we can ignore all summations that do not contain theta. </a><br/>
   <i><a> 2.1 </a><br/>
+  <br/>
   <img src="/Images/deriv2.1.png"><br/>
+  <br/>
   <i><a>And we can treat z as a single, simple term and take its derivative. </a><br/>
+  <br/>
   <i><a> 2.2 </a><br/>
+  <br/>
   <img src="/Images/deriv2.2.png"><br/>
+  <br/>
   <i><a> 2.3 </a><br/>
+  <br/>
   <img src="/Images/deriv2.3.png"><br/>
+  <br/>
   <i><a> 2.4 </a><br/>
+  <br/>
   <img src="/Images/deriv2.4.png"><br/>
+  <br/>
   <i><a>Now the derivative of z^l is just the neuron in the previous layer that multiplies the theta we are solving for. </a><br/></sub>
 </p>
     

@@ -153,9 +153,52 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
     
 3. The derivative of the cost function with respect to any z value is called delta, or the error value for that node. Because 'z' is the weighted sum of all the nodes in the previous layer, if the derivative of the cost w.r.t 'z' (or the slope of the tangent line on the cost function when z is a certain value ) is extremely low, this means that your current z value is already in it's best position to provide the lowest possible value of the cost function and vise versa. This essentially tells you how 'wrong' your combination of weights and biases are, hence the name delta.
 <p align="center">
-  <sub><i><a><b> Goal: Find </a><br/></sub></b>
+  <sub><i><a><b> Goal: Find- </a><br/></b>
   <br/>
   <img src="/Images/deriv3.0.png"><br/>  
+  <br/>
+  <i><a> 3.1 </a><br/>
+  <i><a> Using the chain rule we can break this down further </a><br/>
+  <br/>
+  <img src="/Images/deriv3.1.png"><br/>  
+  <br/>
+  <i><a>  </a> Intuitively this makes sense. Given a node, all the nodes in the layer after it take said node into their calculation, so it only makes sense that when trying to get to the z value of a node through the chain rule, you must go through the outermost layers first to find it's derivative, like peeling an oninon to get to it's center. <br/>
+  <br/>
+  <i><a> 3.2 </a><br/>
+  <i><a> As pointed out earlier, the derivative of the cost function with respect to any Z value is called delta, so we can re-write this as: </a><br/>
+  <br/>
+  <img src="/Images/deriv3.2.png"><br/>  
+  </sub>
 </p>
+    
+ 4. Now we just need to find the derivative of each z value in the next layer with respect to the z value of the current layer.
+ <p align="center">
+  <sub><i><a> 4.1 </a><br/>
+  <i><a><b> The Z values of any layer are just the weighted sum of the values in the previous layer, so the z values in layer l+1 should be the weighted sum of the output values of layer l </a><br/>
+  </b>
+  <img src="/Images/deriv4.1.png"><br/>  
+  </b>
+  <i><a> 4.2 </a><br/>
+  <i><a><b> Similar to our earlier situation, any term that does not contain the z value we are finding the derivative with respect to, will equate to zero, so we can re-write the term as follows:</a><br/>
+  </b>
+  <img src="/Images/deriv4.2.png"><br/> 
+  </b>
+  <i><a> 4.3 </a><br/>
+  <i><a><b> Which then becomes:</a><br/>
+  </b>
+  <img src="/Images/deriv4.3.png"><br/> 
+  </b>
+  <img src="/Images/deriv4.35.png"><br/>   
+  </sub>
+ </ p>
+5. We've done it! After this derivation we end up with:
+    
+<p align="center">
+  <br/>
+  <img src="/Images/deriv5.png"><br/>  
+  <br/>
+  </sub>
+</p>
+ 
 
 

@@ -226,7 +226,7 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   </sub>
 </p>
     
-- In total, what this really means is that we multiply the delta value of every node in the next layer, with the theta that multiplies the node connected with the theta value that we are finding the gradient for in the current layer (the 'current node'). After this we multiply by the derivative of our sigmoid function with respect to the current node's z value and finally multiply by the output value of the node in the previous layer that multiplies with the theta we are finding the gradient for to form the current node's z value. Wow, that was a mouthfull. I really suggest taking a moment (or a few weeks) to sit down and really digest what is happening here to fully grasp this crucial concept in neural networks.
+- In total, what this really means is that we multiply the delta value of every node in the next layer, with the theta that multiplies the node connected with the theta value that we are finding the gradient for in the current layer (the 'current node'). After this we multiply by the derivative of our sigmoid function with respect to the current node's z value and finally multiply by the output value of the node in the previous layer that multiplies with the theta we are finding the gradient for to form the current node's z value. Wow, that was a mouthful. I really suggest taking a moment (or a few weeks) to sit down and really digest what is happening here to fully grasp this crucial concept in neural networks.
  
 
 

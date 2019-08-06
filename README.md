@@ -188,7 +188,7 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   </br>
   <img src="/Images/deriv4.3.png"><br/> 
   </br>
-  <img src="/Images/deriv4.35.png"><br/>   
+  <img src="/Images/deriv 4.35.png"><br/>   
   </sub>
 </p>
 

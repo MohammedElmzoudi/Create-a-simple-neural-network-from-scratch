@@ -87,7 +87,7 @@ And in python:
 ### Notation
 
 <p align="center">
-  <b><a>Cost Function:</a>
+  <b><a>Cost Function:</a></b>
   <br><br>
   <img src="/Images/CostN.png">
 </p>
@@ -105,13 +105,13 @@ And in python:
 </p>
 
 <p align="center">
-  <b><a>Weight l,i,j gradient:</a>
+  <b><a>Weight l,i,j gradient:</a></b>
   <br><br>
   <img src="/Images/NablaN.png"><br/>  
 </p>
 
 <p align="center">
-  <b><a>Delta (Will go over this later on):</a>
+  <b><a>Delta (Will go over this later on):</a></b>
   <br><br>
   <img src="/Images/deltaN.png"><br/>  
 </p>
@@ -173,32 +173,45 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
     
  4. Now we just need to find the derivative of each z value in the next layer with respect to the z value of the current layer.
  <p align="center">
-  <sub><i><a> 4.1 </a><br/>
-  <i><a><b> The Z values of any layer are just the weighted sum of the values in the previous layer, so the z values in layer l+1 should be the weighted sum of the output values of layer l </a><br/>
-  </b>
+  <sub> <i><a> 4.1 </a><br/>
+  <i><a> The Z values of any layer are just the weighted sum of the values in the previous layer, so the z values in layer l+1 should be the weighted sum of the output values of layer l </a><br/>
+  </br>
   <img src="/Images/deriv4.1.png"><br/>  
-  </b>
+  </br>
   <i><a> 4.2 </a><br/>
-  <i><a><b> Similar to our earlier situation, any term that does not contain the z value we are finding the derivative with respect to, will equate to zero, so we can re-write the term as follows:</a><br/>
-  </b>
+  <i><a> Similar to our earlier situation, any term that does not contain the z value we are finding the derivative with respect to, will equate to zero, so we can re-write the term as follows:</a><br/>
+  </br>
   <img src="/Images/deriv4.2.png"><br/> 
-  </b>
+  </br>
   <i><a> 4.3 </a><br/>
-  <i><a><b> Which then becomes:</a><br/>
-  </b>
+  <i><a> Which then becomes:</a><br/>
+  </br>
   <img src="/Images/deriv4.3.png"><br/> 
-  </b>
+  </br>
   <img src="/Images/deriv4.35.png"><br/>   
   </sub>
- </ p>
+</p>
+
 5. We've done it! After this derivation we end up with:
     
 <p align="center">
-  <br/>
+  <sub><br/><i><a> 5.1 </a><br/>
   <img src="/Images/deriv5.png"><br/>  
+  <br/>
+  <i><a> 5.2 </a><br/>
+  <i><a> This entire term is the delta value of the node theta is attatched to: </a><br/>
+  <br/>
+  <img src="/Images/deriv5.2.png"><br/>  
+  <br/>
+  <i><a> 5.3 </a><br/>
+  <i><a> So we can re-write this as: </a><br/>
+  <br/>
+  <img src="/Images/deriv5.3.png"><br/>  
   <br/>
   </sub>
 </p>
+    
+- In total, what this really means is that we multiply the delta value of every node in the next layer, with the theta that multiplies the node connected with the theta value that we are finding the gradient for in the current layer (the 'current node'). After this we multiply by the derivative of our sigmoid function with respect to the current node's z value and finally multiply by the output value of the node in the previous layer that multiplies with the theta we are finding the gradient for to form the current node's z value. Wow, that was a mouthfull. I really suggest taking a moment (or a few weeks) to sit down and really digest what is happening here to fully grasp this crucial concept in neural networks.
  
 
 

@@ -60,16 +60,18 @@ To get started we need to first calculate the values for each layer to be later 
 Using vectorization we can caluculate the activation values for each layer in just one step, starting with the first hidden layer and continuing until you reach the output layer.
 
 <p align="center">
+  <i><sub> Layer 1 <br/>
   <img src="/Images/FFVectorized.png">
   <br/>
   <img src="/Images/FFVectorized1.png">
   <br/>
+  <br/>
+  Layer 2 <br/>
   <img src="/Images/FFVectorized2.png">
   <br/>
   <img src="/Images/FFVectorized3.png">
   <br/>
-  <img src="/Images/FFVectorized4.png">
-  <br/>
+  <i/><sub/>
 </p>
 
 

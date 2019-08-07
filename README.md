@@ -297,14 +297,17 @@ hidden_layer1_delta = hidden_layer1_delta * self.sigmoid_derivative(z_hidden_lay
   <img src="/Images/totalV2.png"><br/>
   <img src="/Images/totalV3.png"><br/>
   <br/>
-  <sub><br/><i><a> Repeating for layer two we get: </a><br/>
+  <br/><i><a> Repeating for layer two we get: </a><br/>
   <br/> 
   <img src="/Images/totalV4.png"><br/>
   <br/>
   <img src="/Images/totalV5.png"><br/>
   <img src="/Images/totalV6.png"><br/>
   </sub>
-    </p>
+</p>
     
+ 3. Now we update our theta values and watch our cost function go down!
+ 
+ 
 
 

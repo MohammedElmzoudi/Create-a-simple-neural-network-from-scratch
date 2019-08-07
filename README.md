@@ -227,6 +227,54 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
 </p>
     
 - In total, what this really means is that we multiply the delta value of every node in the next layer, with the theta that multiplies the node connected with the theta value that we are finding the gradient for in the current layer (the 'current node'). After this we multiply by the derivative of our sigmoid function with respect to the current node's z value and finally multiply by the output value of the node in the previous layer that multiplies with the theta we are finding the gradient for to form the current node's z value. Wow, that was a mouthful. I really suggest taking a moment (or a few weeks) to sit down and really digest what is happening here to fully grasp this crucial concept in neural networks.
- 
+   
+### Delta Values  
+- The delta values extremely useful, because every theta gradient within a node uses the same delta, so by finding the delta value we already have a large piece of the gradient completed for each theta within the node.  
+- Each delta value builds on the delta values in the next layer, so to find each delta we must start with the final layer.  
+- Note that for each cost function the computation of the last layer's delta will be different, but once that is computed all the deltas in following layers build upon it the same way.  
+- For this neural network, our cost function will be squared error:
+
+<p align="center">
+  <sub>
+  <img src="/Images/SquaredError.png"><br/>  
+  </br>
+  <br/><i><a> Find: </a><br/>
+  <img src="/Images/delta1.png"><br/>  
+  <img src="/Images/delta2.png"><br/> 
+  <img src="/Images/delta3.png"><br/> 
+  <br/>
+  <img src="/Images/delta4.1.png"><br/> 
+  </br>
+  <br/><i><a> After repeating this step for each delta value in the final layer we can now proceed to the next layer using these deltas. </a><br/>
+  <img src="/Images/delta5.png"><br/> 
+  <br/>
+  <img src="/Images/delta6.png"><br/>  
+  <img src="/Images/delta7.png"><br/> 
+  </sub>
+</p>
+    
+  
+### Vectorized Implementation  
+  
+- __Goal:__ Find a way to quickly and efficiently implement backpropagation using vectorization.  
+<p align="center">
+  <img src="/Images/neural_network-diagram.png"><br/> 
+  <br/>
+</p>
+    
+1. The convenient thing about backpropagation, is that every theta gradient for each node has the same piece within it - the delta for that node. With this knowledge we can find the delta values for each layer first, then derive each theta gradient from those delta values.  
+  
+<p align="center">
+  <sub><br/><i><a> We first find the delta values for the output layer. </a><br/>
+  <img src="/Images/deltaV1.png"><br/>
+  <br/><i><a> Note that '.*' is an element-wise operation, because we want to multiply each node by the derivative of the sigmoid function with respect to it's own z value. </a><br/>
+  <br/>
+  <img src="/Images/deltaV2.png"><br/>
+  <img src="/Images/deltaV4.1.png"><br/>
+  <img src="/Images/deltaV3.1.png"><br/>
+  <br/><i><a>  </a><br/>
+  </sub>
+</p>
+    
 
 

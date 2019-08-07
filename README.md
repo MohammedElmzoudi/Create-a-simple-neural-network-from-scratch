@@ -61,11 +61,17 @@ Using vectorization we can caluculate the activation values for each layer in ju
 
 <p align="center">
   <img src="/Images/FFVectorized.png">
+  <br/>
+  <img src="/Images/FFVectorized1.png">
+  <br/>
+  <img src="/Images/FFVectorized2.png">
+  <br/>
+  <img src="/Images/FFVectorized3.png">
+  <br/>
+  <img src="/Images/FFVectorized4.png">
+  <br/>
 </p>
 
-<p align="center">
-  <img src="/Images/FFVectorized2.png">
-</p>
 
 And in python:   
 ```

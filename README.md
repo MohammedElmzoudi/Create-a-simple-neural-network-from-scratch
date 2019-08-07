@@ -270,17 +270,21 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   <br/><i><a> Note that '.*' is an element-wise operation, because we want to multiply each node by the derivative of the sigmoid function with respect to it's own z value. </a><br/>
   <br/>
   <img src="/Images/deltaV2.png"><br/>
+  <br/>
   <img src="/Images/deltaV4.1.png"><br/>
   <img src="/Images/deltaV3.1.png"><br/>
   </sub>
 </p>
- - And in python:
- ```
-        ## Calculate delta values
-        output_layer_delta = (output_layer - self.output_values) * self.sigmoid_derivative(z_output_layer) 
-        hidden_layer1_delta = np.matmul(self.weights2.T,output_layer_delta)  
-        hidden_layer1_delta = hidden_layer1_delta * self.sigmoid_derivative(z_hidden_layer1)  
- ```
+     
+ - And in python:  
+   
+```
+## Calculate delta values
+output_layer_delta = (output_layer - self.output_values) * self.sigmoid_derivative(z_output_layer) 
+hidden_layer1_delta = np.matmul(self.weights2.T,output_layer_delta)  
+hidden_layer1_delta = hidden_layer1_delta * self.sigmoid_derivative(z_hidden_layer1)  
+```
+  
 2. With our new delta values we can now find the gradient for each theta. Remember that we want each theta gradient value to be equal to the curent node's delta * the node in the previous layer that the weight is attached to.
 - This can be accomplished by taking the outer product of the two vectors.
   
@@ -289,17 +293,18 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   <sub><br/><i><a> We can start by finding the output layer's gradients: </a><br/>
   <br/>
   <img src="/Images/totalV1.png"><br/>
+  <br/>
   <img src="/Images/totalV2.png"><br/>
   <img src="/Images/totalV3.png"><br/>
   <br/>
   <sub><br/><i><a> Repeating for layer two we get: </a><br/>
   <br/> 
   <img src="/Images/totalV4.png"><br/>
+  <br/>
   <img src="/Images/totalV5.png"><br/>
   <img src="/Images/totalV6.png"><br/>
   </sub>
-</p>
-
+    </p>
     
 
 

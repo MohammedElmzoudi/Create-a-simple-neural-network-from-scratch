@@ -313,12 +313,15 @@ hidden_layer1_delta = hidden_layer1_delta * self.sigmoid_derivative(z_hidden_lay
   <img src="/Images/totalV6.1.png"><br/>
   </sub>
 </p>
- - In python: 
-```
-## Calculate final weight gradients by taking outer product with the previous layer
-weights2_gradient = np.outer(output_layer_delta,hidden_layer1.T)
-weights1_gradient = np.outer(hidden_layer1_delta,self.input_values.T)
-```
+      
+ - In python:  
+     
+ ```
+ ## Calculate final weight gradients by taking outer product with the previous layer
+ weights2_gradient = np.outer(output_layer_delta,hidden_layer1.T)
+ weights1_gradient = np.outer(hidden_layer1_delta,self.input_values.T)
+ ```
+      
  3. Now we multiply our gradient by an alpha value which determines the rate at which we descent, and subtract from our  original theta values.
  <p align="center">
   <br/>
@@ -332,7 +335,9 @@ weights1_gradient = np.outer(hidden_layer1_delta,self.input_values.T)
   <img src="/Images/tUpdate2.png"><br/>
   </sub>
 </p>
-- In python: 
+      
+- In python:  
+    
 ```
 ## Update weights
 self.weights1 = self.weights1 - a * weights1_gradient
@@ -354,6 +359,7 @@ https://stats.stackexchange.com/questions/94387/how-to-derive-errors-in-neural-n
 All equations were created using online LaTeX equation editor
 -http://rogercortesi.com/eqn/index.php
 
+-Guide by Mohammed Elmzoudi
 
 
 

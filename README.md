@@ -284,7 +284,7 @@ __Goal__ : Find Derivative of the cost function with respect to a specific weigh
   </sub>
 </p>
      
- - And in python:  
+ - In python:  
    
 ```
 ## Calculate delta values
@@ -303,19 +303,57 @@ hidden_layer1_delta = hidden_layer1_delta * self.sigmoid_derivative(z_hidden_lay
   <img src="/Images/totalV1.png"><br/>
   <br/>
   <img src="/Images/totalV2.png"><br/>
-  <img src="/Images/totalV3.png"><br/>
+  <img src="/Images/totalV3.1.png"><br/>
   <br/>
   <br/><i><a> Repeating for layer two we get: </a><br/>
   <br/> 
   <img src="/Images/totalV4.png"><br/>
   <br/>
   <img src="/Images/totalV5.png"><br/>
-  <img src="/Images/totalV6.png"><br/>
+  <img src="/Images/totalV6.1.png"><br/>
   </sub>
 </p>
-    
- 3. Now we update our theta values and watch our cost function go down!
+ - In python: 
+```
+## Calculate final weight gradients by taking outer product with the previous layer
+weights2_gradient = np.outer(output_layer_delta,hidden_layer1.T)
+weights1_gradient = np.outer(hidden_layer1_delta,self.input_values.T)
+```
+ 3. Now we multiply our gradient by an alpha value which determines the rate at which we descent, and subtract from our  original theta values.
+ <p align="center">
+  <br/>
+  <sub><i> Output layer <br/>
+  <img src="/Images/tUpdate3.png"><br/>
+  <img src="/Images/tUpdate4.png"><br/>
+  <br/>
+  <br/>
+  <i> layer 2 <br/>
+  <img src="/Images/tUpdate1.png"><br/>
+  <img src="/Images/tUpdate2.png"><br/>
+  </sub>
+</p>
+- In python: 
+```
+## Update weights
+self.weights1 = self.weights1 - a * weights1_gradient
+self.weights2 = self.weights2 - a * weights2_gradient
+```
  
- 
+- We have now sucessfully updated our theta values! After running 10,000 iterations our error decreases 99.9882%, and the model returns values very close to the desired output of [.01, 0.99], returning [0.00885999 0.9897063] as opposed to the starting value of [0.7478592  0.78256178].
+- Note that this neural network currenly takes in only one training input, but if you were to take in 'm' training examples you would just need to divide the gradients by m, to get the average change for each theta.
+
+## Resources
+http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
+https://www.youtube.com/watch?v=6kScLENCXLg&vl=en
+https://thumbs.gfycat.com/KindAmpleImperialeagle-size_restricted.gif
+https://en.wikipedia.org/wiki/Gradient_descent
+https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
+https://en.wikipedia.org/wiki/Sigmoid_function
+https://stats.stackexchange.com/questions/94387/how-to-derive-errors-in-neural-network-with-the-backpropagation-algorithm
+
+All equations were created using online LaTeX equation editor
+-http://rogercortesi.com/eqn/index.php
+
+
 
 

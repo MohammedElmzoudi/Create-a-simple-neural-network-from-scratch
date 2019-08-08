@@ -11,46 +11,27 @@ This project aims to help you create a simple 3 layer neural network (1 output l
 
 > https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/.  
 
-## Getting Started
+# Getting Started
 
-### Weights  
-The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron.   
-  
-<p align="center">
-  <img src="/Images/layer1_weights.png">
-  <img src="/Images/layer2_weights.png">
-</p>
-  
-> Weights for layers 2 and 3 respectively
-   
-### Layers  
-Each computed layer will be stored in a 2x1 column vector 
-  
-<p align="center">
-  <img src="/Images/Layer1.png">
-  <img src="/Images/layer2.png">
-  <img src="/Images/layer3.png">
-</p>
-
-> Layers 1, 2, and 3 respectively
-  
-  
 ## Forward Propagation
-
+  
 To get started we need to first calculate the values for each neuron to be later used for back propagation.  
-
-1. Multiply each weight 'attatched' to the neuron by a neuron in the previous layer, and take the sum of all these values (The weighted sum) which will be refered to as the 'z' value of that neuron. Note that each neuron has a weight for all the neurons in the previous layer.
-
+  
+1. Each neuron has what are called weights. These weights act as scalar values for each neuron in the previous layer, and by taking the sum of the scaled values from the previous layer we are able to get what I will call the 'z' value of a neuron.
+  
  <p align="center">
   <img src="/Images/z_calculation.png">
 </p>
-
-2. Plug the calculated Z value into an activation function. The activation function we will be using for each neuron is the [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function). 
+  
+2. To find the final output for the neuron we will plug this 'z' value into what is called a [Sigmoid Activation Function](https://en.wikipedia.org/wiki/Sigmoid_function). The sigmoid function turns every value into a number between 0 - 1, with a large number being closer towards 1 and a smaller/negative number being close to 0. This function is useful for classification problems, where a model can output a value 0 - 1 indicating, for example, the percentage that a tumor is benign or malignant, or in the case of a multi-classification neural network the desired outputs could be vectors of 0's and 1's indicating different output classes, for example, an output with values close to [1,0,0] indicating that the model thinks that the input image is a motorcycle, or a [0,1,0] is a car, ect.
   
 <p align="center">
+  <sub><i> Sigmoid Activation Function<sub/><i/><br/>
+  <img src="/Images/sigmoid_function.png">
+  <br/>
   <img src="/Images/activation_calculation.png">
 </p>
-   - If you are not yet familiar with how activation functions work I highly recommend watching this video on the topic.
+   - If you would like to delve deeper on how activation functions work I highly recommend watching this video on the topic.
 <p align="center">
   <a href="http://www.youtube.com/watch?feature=player_embedded&v=m0pIlLfpXWE
   " target="_blank"><img src="http://img.youtube.com/vi/m0pIlLfpXWE/0.jpg"
@@ -99,10 +80,7 @@ And in python:
   <br><br>
   <img src="/Images/CostN.png">
 </p>
-
-
-
-
+  
 <p align="center">
   <b><a>Weights:</a></b>
   <br><br>
@@ -111,18 +89,39 @@ And in python:
   <i><a>i = The specific neuron that the weight is attatched to.</a><br/>
   <i><a>j = the neuron of the previous layer that is multiplied by the weight. </a><br/>
 </p>
-
+  
 <p align="center">
   <b><a>Weight l,i,j gradient:</a></b>
   <br><br>
   <img src="/Images/NablaN.png"><br/>  
 </p>
-
+  
 <p align="center">
   <b><a>Delta (Will go over this later on):</a></b>
   <br><br>
   <img src="/Images/deltaN.png"><br/>  
 </p>
+  
+<p align="center">
+  <b><a>The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron. </a></b><br/>
+  <img src="/Images/layer1_weights.png">
+  <img src="/Images/layer2_weights.png">
+  <br/>
+  <i><a> Weights for layers 2 and 3 respectively </a><i/>
+</p>
+   
+<p align="center">
+  <b><a>Each computed layer will be stored in a 2x1 column vector </a></b><br/>
+  <img src="/Images/Layer1.png">
+  <img src="/Images/layer2.png">
+  <img src="/Images/layer3.png">
+  <br/>
+  <i><a> Layers 1, 2, and 3 respectively </a><i/>
+</p>
+
+
+  
+    
 
 
 

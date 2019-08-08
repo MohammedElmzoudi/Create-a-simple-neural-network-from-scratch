@@ -104,17 +104,21 @@ And in python:
   
 <p align="center">
   <b><a>The weights for each layer are stored in a 2x2 matrix, where each row indicates the neuron as a whole, and each column within the row is an individual weight attatched to that neuron. </a></b><br/>
+  <br/>
   <img src="/Images/layer1_weights.png">
   <img src="/Images/layer2_weights.png">
+  <br/>
   <br/>
   <i><a> Weights for layers 2 and 3 respectively </a><i/>
 </p>
    
 <p align="center">
   <b><a>Each computed layer will be stored in a 2x1 column vector </a></b><br/>
+  <br/>
   <img src="/Images/Layer1.png">
   <img src="/Images/layer2.png">
   <img src="/Images/layer3.png">
+  <br/>
   <br/>
   <i><a> Layers 1, 2, and 3 respectively </a><i/>
 </p>

@@ -1,4 +1,4 @@
-# Create-a-simple-neural-network-from-scratch
+# Create-a-multi-layer-neural-network-from-scratch
 Learn how to create a fully functioning neural network with fully vectorized and simple implementations of forward and back propagation in python without the use of external machine learning libraries.
 
 <p align="center">
